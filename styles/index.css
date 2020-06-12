@@ -282,7 +282,6 @@ footer{
 .learning hr {
     border: none;     
     background-color: #ffffff;
-    color: #ffffff; /* Цвет линии для IE6-7 */
     height: 1px;
     width: 50%; 
    }
