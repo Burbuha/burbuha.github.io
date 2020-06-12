@@ -174,8 +174,11 @@ nav{
 	padding: 10px 30px;
 }
 /*Footer*/
-.footer{
+footer{
 	grid-area: "footer";
+}
+
+.footer{
 	padding: 16px 80px 16px 80px;
 	background: #222222;
 	color: #F6F6F6;
@@ -372,7 +375,6 @@ nav{
 	}
 	.course-card__wrapper{
 		display: flex;
-		display: -webkit-flex; /* Safari */
 		flex-direction: row;
 		justify-content: space-around;
 		flex-wrap: wrap;
@@ -419,8 +421,7 @@ nav{
 		left: 0;
 		width: 100%;
 		height:100%;
-		-o-object-fit: cover;
-		   object-fit: cover;
+		object-fit: cover;
 
 
 	}
@@ -437,7 +438,7 @@ nav{
 		color: #ffffff;
 	}
 	.course-card__title::before {
-		content: '';
+		content: "";
 		position: absolute;
 		bottom: 0;
 		width: 0;
@@ -476,10 +477,11 @@ nav{
 		text-decoration: underline;
 		outline: none;
 	}
-	.aside-nav__link:active{
-		text-shadow: 6px 6px 0px rgba(0,0,0,0.2) inset;
+	/*.aside-nav__link:active{
+		text-decoration: underline;
+		color: #77B779;
 		outline: none;
-	}
+	}*/
 	/*Курсы описание*/
 	.title{
 		text-align: center;
@@ -493,8 +495,7 @@ nav{
 		width: 100%;
 		height:100%;
 		text-align: center;
-		-o-object-fit: cover;
-		   object-fit: cover;
+		object-fit: cover;
 	}
 	.description{
 		padding: 0px 80px 80px 0px;
