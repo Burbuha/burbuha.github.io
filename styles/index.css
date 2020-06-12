@@ -4,7 +4,7 @@ html {
 body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
-	min-height: 100%;
+	min-height: 100%;/* Растягиваем body по высоте html */
 	display: grid;
 	grid-template-rows: auto 1fr auto;
   grid-template-areas: 
@@ -183,6 +183,7 @@ footer{
 	background: #222222;
 	color: #F6F6F6;
 	font-size: 14px;
+	height: 250px;
 }
 .footer-logo{
 	width:50%;
