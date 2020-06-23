@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Галерея - Helen.by</title>
     <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/lightgallery.min.css" />
+
     <!-- favicon -->
     <link
       rel="apple-touch-icon"
@@ -390,14 +392,14 @@
             </a>
           </li>
           <li
-            data-src="images/content/foto/IMG_1228.JPG"
+            data-src="images/content/foto/imgdress.jpg"
             data-sub-html="<h4>Пошив платья, блузы</h4>"
             class="gallery__photo"
           >
-            <a href="images/content/foto/IMG_1228.JPG" class="gallery__link">
+            <a href="images/content/foto/imgdress.jpg" class="gallery__link">
               <img
                 class="gallery__img-responsive"
-                src="images/content/small/IMG_1228.jpg"
+                src="images/content/small/imgdress.jpg"
                 alt="Платье"
               />
               <div class="gallery__poster">
@@ -592,5 +594,20 @@
         ><i class="fas fa-arrow-alt-circle-up fa-3x"></i
       ></a>
     </footer>
+
+    <!-- jQuery version must be >= 1.8.0; -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/lightgallery.min.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script src="js/lg-thumbnail.min.js"></script>
+    <script src="js/lg-fullscreen.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#lightgallery").lightGallery();
+      });
+    </script>
   </body>
 </html>
