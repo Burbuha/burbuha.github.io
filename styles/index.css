@@ -101,16 +101,17 @@ nav {
 .menu__item {
   display: inline-block;
   margin-left: 10px;
+  padding: 2px;
   cursor: pointer;
   list-style-type: none;
   position: relative;
 }
 .menu__item:hover {
-  box-shadow: 0px 0px 3px 0px #000000;
+  box-shadow: 1px 1px 3px 0px #000000;
   outline: none;
 }
 .menu__item:active {
-  box-shadow: 0px 0px 3px 0px #000000 inset;
+  box-shadow: 1px 1px 3px 0px #000000 inset;
   outline: none;
 }
 .menu__item-has-children > a::after {
@@ -124,27 +125,34 @@ nav {
 }
 .menu__sub-menu {
   position: absolute;
-  display: none;
+  top: 25px;
+  left: -1px;
   list-style-type: none;
   width: 200px;
   text-align: left;
-  padding: 15px;
+  padding: 0;
+  margin-left: 15px;
+  margin: 0;
   box-shadow: 0px 0px 3px 0px #000000;
   background-color: #ffffff;
   z-index: 11;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.4s linear;
 }
 .menu__sub-menu li {
-  padding-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid rgb(179, 179, 179);
 }
 .menu__item:hover .menu__sub-menu {
-  display: block;
+  max-height: 300px;
 }
 .menu__sub-menu li:hover {
-  text-decoration: none;
-  text-shadow: 1px 1px 1px #666;
+  box-shadow: 0px 0px 3px 0px rgb(179, 179, 179);
 }
 .menu__sub-menu li:active {
-  text-decoration: underline;
+  text-decoration: none;
+  font-weight: bold;
 }
 /*botton*/
 .btn {
@@ -252,6 +260,7 @@ nav {
   max-height: 672px;
   max-width: 800px;
   z-index: -1;
+  object-fit: cover;
 }
 .advt__news {
   width: 40%;
@@ -462,7 +471,7 @@ nav {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 30px 10px;
+  padding: 20px 10px;
   background-color: rgba(21, 40, 54, 0.7);
   color: #ffffff;
 }
@@ -480,24 +489,25 @@ nav {
 }
 /*Навигация__sidebar*/
 .aside-nav {
-  top: 150px;
   width: 30%;
   padding-right: 50px;
   padding-top: 80px;
 }
-.aside-nav__menu {
+/* .aside-nav__menu {
   padding: 20px;
   line-height: 1.8em;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
-}
-.aside-nav__item {
+} */
+/* .aside-nav__item {
   display: block;
   cursor: pointer;
   list-style-type: none;
-}
+} */
 .aside-nav__sub-item {
   list-style-type: none;
+  border-bottom: 1px solid rgb(179, 179, 179);
+  line-height: 2.5em;
 }
 .aside-nav__sub-menu {
   padding-left: 15px;
@@ -505,16 +515,18 @@ nav {
 .aside-nav__link {
   text-decoration: none;
   color: #000000;
+  padding: 3px;
 }
-.aside-nav__link:hover {
+.aside-nav__sub-item:hover {
   background-color: #fff;
   color: #202c2d;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px #666;
+  box-shadow: 1px 1px 3px 0px rgb(179, 179, 179);
   outline: none;
 }
-.aside-nav__link:active {
-  text-decoration: underline;
+.aside-nav__sub-item:active {
+  color: #000;
+  font-weight: bold;
+  box-shadow: 1px 1px 3px 0px rgb(179, 179, 179) inset;
 }
 
 /*Курсы описание*/
@@ -762,14 +774,27 @@ fieldset {
 .link {
   color: #000000;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .gallery__header h1,
   h1 {
     font-size: 46px;
     margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  header,
+  .advt,
+  .whom-courses,
+  .learning,
+  .footer,
+  .about-us {
+    padding-left: 50px;
+    padding-right: 50px;
   }
   .course-card__title {
     font-size: 14px;
+  }
+  .advt {
+    height: auto;
   }
   .contact-wrapper {
     flex-wrap: wrap;
@@ -785,9 +810,17 @@ fieldset {
   .aside-nav {
     padding: 50px 30px 0 0;
   }
+  .our-courses,
+  .content {
+    margin: 0 350px 0 50px;
+  }
+  .contact {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 992px) {
   .logo__header,
   .logo__text {
     display: none;
@@ -795,5 +828,34 @@ fieldset {
   .gallery__header h1,
   h1 {
     font-size: 40px;
+    margin-top: 10px;
+  }
+  header,
+  .advt,
+  .whom-courses,
+  .learning,
+  .footer,
+  .about-us {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .advt {
+    padding: 0 40px;
+  }
+  .sidebar-ad {
+    margin-right: 30px;
+  }
+  .our-courses,
+  .content {
+    margin-left: 30px;
+  }
+  .skill {
+    margin-bottom: 0px;
+  }
+  .form {
+    width: 100%;
+  }
+  .sign-up__header {
+    padding: 0 50px;
   }
 }
