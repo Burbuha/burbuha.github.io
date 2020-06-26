@@ -1019,7 +1019,17 @@ fieldset {
     box-shadow: none;
     background-color: rgba(105, 94, 94, 0.1);
   }
-
+  .menu__link:hover {
+    box-shadow: 1px 1px 3px 0px #000000 inset;
+  }
+  .menu__item:hover {
+    box-shadow: none;
+    outline: none;
+  }
+  .menu__item:active {
+    box-shadow: none;
+    outline: none;
+  }
   .gallery__header h1,
   h1 {
     font-size: 34px;
