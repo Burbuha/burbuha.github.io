@@ -747,6 +747,7 @@ h3 {
 .location__map {
   width: 80%;
   height: 300px;
+  border: 0;
 }
 /*Контакты__Запись на курс*/
 .sign-up {
