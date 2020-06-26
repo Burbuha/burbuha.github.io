@@ -98,7 +98,7 @@
     ></script>
   </head>
   <body>
-    <header class="clearfix">
+    <header id="top">
       <div class="logo">
         <a href="index.html"
           ><img src="images/logo.png" alt="Логотип" class="logo__img"
@@ -106,7 +106,10 @@
         <h2 class="logo__header">Школа Елены Товстыка</h2>
         <p class="logo__text">Курсы кройки и шитья в Минске</p>
       </div>
-      <nav class="navigation">
+
+      <input type="checkbox" id="switcher" />
+      <label class="open" for="switcher"><i class="fas fa-bars"></i></label>
+      <nav>
         <ul class="menu">
           <li class="menu__item">
             <a href="index.html" class="menu__link">Главная</a>
@@ -159,6 +162,9 @@
             <a href="contacts.html#sign-up" class="btn">Записаться</a>
           </li>
         </ul>
+        <label class="close" for="switcher"
+          ><i class="far fa-window-close"></i
+        ></label>
       </nav>
     </header>
 
@@ -287,7 +293,7 @@
       </div>
 
       <div class="footer-info clearfix">
-        <div class="footer-info__block">
+        <div class="footer-info__block footer-info__nav">
           <ul class="footer-info__menu">
             <li><a href="index.html" class="footer-info__link">Главная</a></li>
             <li>

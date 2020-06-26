@@ -19,6 +19,9 @@ body {
 header {
   padding: 16px 80px 0px 80px;
   grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 h1 {
   font-family: "Playfair Display", serif;
@@ -66,15 +69,15 @@ h3 {
 
 /*логотип*/
 .logo {
-  float: left;
   position: relative;
+  align-self: start;
 }
 .logo__header {
+  margin-bottom: 0px;
+  padding-left: 70px;
   font-weight: 500;
   font-size: 22px;
   line-height: 1em;
-  margin-bottom: 0px;
-  padding-left: 70px;
 }
 .logo__text {
   font-size: 12px;
@@ -89,11 +92,38 @@ h3 {
   height: 52px;
 }
 /*навигация по сайту в Header*/
-nav {
-  float: right;
-  max-width: 700px;
+#switcher {
+  position: absolute;
+  left: -999999px;
+  visibility: hidden;
+}
+.close {
+  color: #ffffff;
+  font-size: 28px;
+  margin-top: 5px;
+}
+
+.fa-bars {
+  color: #000000;
+  font-size: 28px;
+  display: none;
+  margin-top: 5px;
+}
+#switcher:checked ~ nav {
+  left: 0;
+}
+.close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+.open,
+.close {
+  display: none;
 }
 .menu {
+  display: flex;
+  align-items: center;
   padding: 0;
   max-width: 100%;
 }
@@ -198,6 +228,7 @@ nav {
 .footer-logo {
   width: 50%;
   float: left;
+  padding-right: 10px;
 }
 .footer-logo__header {
   text-align: left;
@@ -258,8 +289,11 @@ nav {
   width: 56%;
   height: 672px;
   max-width: 800px;
+  background-image: url(../images/content/Rectangle%201.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: -1;
-  object-fit: cover;
 }
 .advt__news {
   width: 40%;
@@ -523,7 +557,7 @@ nav {
 } */
 .aside-nav__sub-item {
   list-style-type: none;
-  border-bottom: 1px solid rgb(179, 179, 179);
+  border-bottom: 1px dotted rgb(179, 179, 179);
   line-height: 1.2em;
   padding: 10px 5px;
 }
@@ -858,6 +892,9 @@ fieldset {
   .logo__img {
     top: 0;
   }
+  .footer-logo .logo .logo__img {
+    top: 20px;
+  }
   .gallery__header h1,
   h1 {
     font-size: 38px;
@@ -875,10 +912,6 @@ fieldset {
   }
   .footer-info__contact {
     padding: 10px 10px 0;
-  }
-  .advt {
-    display: flex;
-    justify-content: space-between;
   }
   .menu__item .btn {
     display: none;
@@ -898,6 +931,9 @@ fieldset {
   .sidebar-ad {
     margin-right: 30px;
   }
+  .course-card {
+    margin: 10px auto 50px;
+  }
   .our-courses,
   .our-courses__text,
   .content {
@@ -908,6 +944,9 @@ fieldset {
     margin: 0 10px 10px;
     padding: 10px;
     width: 30%;
+  }
+  .about-us {
+    margin-top: 20px;
   }
   .form {
     width: 90%;
@@ -940,9 +979,50 @@ fieldset {
 }
 
 @media (max-width: 768px) {
+  /*меню гамбургер*/
+  .menu {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 50px;
+  }
+
+  .menu__link {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px;
+    display: block;
+    color: #ffffff;
+  }
+
+  nav {
+    position: fixed;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(105, 94, 94, 0.9);
+    transition: left 0.4s;
+    z-index: 100;
+  }
+  .open,
+  .close {
+    display: block;
+  }
+  .menu__sub-menu {
+    width: 100%;
+    max-height: 500px;
+    padding-left: 50px;
+    position: static;
+    box-shadow: none;
+    background-color: rgba(105, 94, 94, 0.1);
+  }
+
   .gallery__header h1,
   h1 {
-    font-size: 36px;
+    font-size: 34px;
     margin-top: 10px;
   }
   header,
@@ -954,14 +1034,86 @@ fieldset {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .footer {
+    height: 330px;
+    padding-top: 50px;
+    position: relative;
+  }
+  .footer-info__block {
+    width: 40%;
+  }
+  .footer-info__contact {
+    width: 60%;
+  }
+  .footer-info__nav {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  .footer-info__menu {
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer-logo__text {
+    display: none;
+  }
+  .footer-logo {
+    width: 40%;
+  }
+  .whom-courses {
+    padding-bottom: 50px;
+  }
   .advt {
-    padding: 0 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .advt__img {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+  .advt__news {
+    width: 100%;
+    text-align: center;
+    padding: 20px 50px;
+  }
+  .advt {
+    padding: 0;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .whom-courses__block {
+    padding: 0 10px;
+  }
+  .learning__step {
+    width: 41%;
+  }
+  .skill {
+    width: 40%;
   }
   .our-courses,
   .content {
     margin-left: 20px;
   }
+  .wrapper-course {
+    flex-direction: column-reverse;
+  }
+  .aside-nav {
+    width: 100%;
+  }
+  .aside-nav__sub-menu {
+    border-top: 1px solid rgb(179, 179, 179);
+    border-left: 1px solid rgb(179, 179, 179);
+  }
+  .description {
+    width: 100%;
+  }
   .sign-up__header {
-    padding: 0 50px;
+    padding: 0 150px;
   }
 }
