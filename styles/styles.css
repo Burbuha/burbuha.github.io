@@ -1196,6 +1196,9 @@ fieldset {
   .footer-info__link {
     font-size: 12px;
   }
+  .footer-copyright {
+    padding-top: 40px;
+  }
   .advt__news {
     padding: 20px;
   }
