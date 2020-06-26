@@ -744,6 +744,10 @@ h3 {
 .location {
   text-align: center;
 }
+.location__map {
+  width: 80%;
+  height: 300px;
+}
 /*Контакты__Запись на курс*/
 .sign-up {
   padding-bottom: 80px;
@@ -892,9 +896,9 @@ fieldset {
   .logo__img {
     top: 0;
   }
-  .footer-logo .logo .logo__img {
+  /* .footer-logo .logo .logo__img {
     top: 20px;
-  }
+  } */
   .gallery__header h1,
   h1 {
     font-size: 38px;
@@ -985,10 +989,10 @@ fieldset {
     height: 100vh;
     flex-direction: column;
     justify-content: center;
+    align-content: flex-start;
     align-items: start;
     padding-left: 50px;
   }
-
   .menu__link {
     text-decoration: none;
     font-size: 20px;
@@ -996,7 +1000,6 @@ fieldset {
     display: block;
     color: #ffffff;
   }
-
   nav {
     position: fixed;
     left: 100%;
@@ -1030,6 +1033,7 @@ fieldset {
     box-shadow: none;
     outline: none;
   }
+
   .gallery__header h1,
   h1 {
     font-size: 34px;
@@ -1070,6 +1074,9 @@ fieldset {
   }
   .footer-logo__text {
     display: none;
+  }
+  .footer-logo__header {
+    font-size: 18px;
   }
   .footer-logo {
     width: 40%;
@@ -1125,5 +1132,120 @@ fieldset {
   }
   .sign-up__header {
     padding: 0 150px;
+  }
+  .container {
+    padding: 5px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .advt,
+  .whom-courses {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .footer {
+    height: 450px;
+  }
+  .footer-info__block {
+    width: 100%;
+    padding: 0;
+  }
+  .learning__step {
+    width: 39%;
+    padding: 0;
+  }
+  .course-card {
+    width: 40%;
+  }
+  .news__header-news {
+    font-size: 20px;
+  }
+  .news__notice {
+    font-size: 14px;
+  }
+  .location__map {
+    width: 100%;
+  }
+  .form-group__form-message {
+    min-width: 100px;
+  }
+  .form-group__input-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu__link {
+    font-size: 16px;
+  }
+  .close {
+    top: 18px;
+  }
+  .footer {
+    height: 600px;
+  }
+  .footer-logo {
+    float: none;
+    width: 100%;
+  }
+  .footer-info {
+    float: none;
+    width: 100%;
+  }
+  .footer-info__link {
+    font-size: 12px;
+  }
+  .advt__news {
+    padding: 20px;
+  }
+  .whom-courses__block {
+    float: none;
+    width: 100%;
+  }
+  .learning__steps {
+    flex-direction: column;
+  }
+  .learning__step {
+    width: 100%;
+  }
+  .learning__header {
+    min-height: auto;
+  }
+  .skills-wrapper {
+    flex-direction: column;
+  }
+  .skill {
+    width: 100%;
+    margin: 5px;
+  }
+  .skill__header {
+    min-height: auto;
+    margin-bottom: 15px;
+  }
+  .course-card {
+    width: 80%;
+  }
+  .container-news {
+    flex-direction: column;
+  }
+  .news {
+    width: 100%;
+  }
+  .description__text {
+    text-align: justify;
+  }
+  .about-us__img {
+    float: none;
+    width: 100%;
+  }
+  .about-us__content {
+    text-align: justify;
+  }
+  .contact-wrapper {
+    flex-direction: column;
+  }
+  .contact__block {
+    width: 100%;
   }
 }
