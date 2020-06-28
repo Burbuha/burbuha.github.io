@@ -965,7 +965,7 @@ fieldset {
   }
   .content,
   .our-courses {
-    width: 100%;
+    width: auto;
   }
   .container-news {
     flex-direction: row;
@@ -1131,9 +1131,6 @@ fieldset {
   .description {
     width: 100%;
   }
-  .sign-up__header {
-    padding: 0 150px;
-  }
   .container {
     padding: 5px 20px;
   }
@@ -1165,9 +1162,7 @@ fieldset {
   .news__notice {
     font-size: 14px;
   }
-  .location__map {
-    width: 100%;
-  }
+
   .form-group__form-message {
     min-width: 100px;
   }
@@ -1246,10 +1241,25 @@ fieldset {
   .about-us__content {
     text-align: justify;
   }
+  .content {
+    margin: 5px;
+  }
   .contact-wrapper {
     flex-direction: column;
   }
   .contact__block {
+    width: auto;
+  }
+  .location__map {
+    width: 90%;
+    height: 200px;
+  }
+  .sign-up {
+    padding: 0 0 50px;
     width: 100%;
+  }
+  .form-group__form-message,
+  .form-group__input-form {
+    font-size: 12px;
   }
 }
