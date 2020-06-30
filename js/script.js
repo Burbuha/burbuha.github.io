@@ -17,9 +17,11 @@ jQuery(function ($) {
     event.preventDefault(); //отменить действие ссылки по умолчанию
     body.animate({ scrollTop: 0 }, 1200);
   });
-});
 
-//gallery
-$(document).ready(function () {
+  //gallery
   $("#lightgallery").lightGallery();
 });
+
+// $(document).ready(function () {
+
+// });
