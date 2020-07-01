@@ -21,7 +21,3 @@ jQuery(function ($) {
   //gallery
   $("#lightgallery").lightGallery();
 });
-
-// $(document).ready(function () {
-
-// });

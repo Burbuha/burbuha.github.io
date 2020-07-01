@@ -2,26 +2,18 @@ html {
   height: 100%;
 }
 body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  min-height: 100%; /* Растягиваем body по высоте html */
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header"
     "main"
     "footer";
+  margin: 0;
+  min-height: 100%; /* Растягиваем body по высоте html */
+  font-family: "Roboto", sans-serif;
 }
 * {
   box-sizing: border-box;
-}
-/*header*/
-header {
-  padding: 16px 80px 0px 80px;
-  grid-area: header;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 h1 {
   font-family: "Playfair Display", serif;
@@ -38,13 +30,13 @@ h2 {
 }
 h3 {
   font-size: 22px;
-  line-height: 28px;
   text-align: center;
+  line-height: 28px;
 }
 .main {
   grid-area: main;
-  margin: auto;
   height: auto;
+  margin: auto;
 }
 .clearfix:before,
 .clearfix:after {
@@ -58,15 +50,22 @@ h3 {
   display: none;
   position: fixed;
   left: 50%;
-  margin-left: -20px;
   bottom: 5px;
+  margin-left: -20px;
   z-index: 11;
   color: rgba(105, 94, 94, 0.2);
 }
 .to-top:hover {
   color: rgba(105, 94, 94, 1);
 }
-
+/*header*/
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 80px 0px 80px;
+}
 /*логотип*/
 .logo {
   position: relative;
@@ -80,9 +79,9 @@ h3 {
   line-height: 1em;
 }
 .logo__text {
+  padding-left: 70px;
   font-size: 12px;
   color: #a4a4a4;
-  padding-left: 70px;
 }
 .logo__img {
   display: inline-block;
@@ -98,24 +97,24 @@ h3 {
   visibility: hidden;
 }
 .close {
-  color: #ffffff;
-  font-size: 28px;
   margin-top: 5px;
+  font-size: 28px;
+  color: #ffffff;
 }
 
 .fa-bars {
-  color: #000000;
-  font-size: 28px;
   display: none;
   margin-top: 5px;
+  font-size: 28px;
+  color: #000000;
 }
 #switcher:checked ~ nav {
   left: 0;
 }
 .close {
   position: absolute;
-  right: 24px;
   top: 24px;
+  right: 24px;
 }
 .open,
 .close {
@@ -128,11 +127,11 @@ h3 {
   max-width: 100%;
 }
 .menu__item {
+  position: relative;
   display: inline-block;
   padding: 2px 5px;
   cursor: pointer;
   list-style-type: none;
-  position: relative;
 }
 .menu__item:hover {
   box-shadow: 1px 1px 3px 0px #000000;
@@ -155,17 +154,16 @@ h3 {
   position: absolute;
   top: 25px;
   left: -1px;
-  list-style-type: none;
-  width: 200px;
-  text-align: left;
-  padding: 0;
-  margin-left: 15px;
-  margin: 0;
-  box-shadow: 0px 0px 3px 0px #000000;
-  background-color: #ffffff;
   z-index: 11;
+  width: 200px;
+  padding: 0;
+  margin: 0 0 15px 0;
   max-height: 0px;
   overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 3px 0px #000000;
+  list-style-type: none;
+  text-align: left;
   transition: max-height 0.4s linear;
 }
 .menu__sub-menu li {
@@ -179,27 +177,23 @@ h3 {
   box-shadow: 0px 0px 3px 0px rgb(179, 179, 179);
 }
 .menu__sub-menu li:active {
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
 }
 /*botton*/
 .btn {
+  display: inline-block;
+  padding: 10px 16px;
   border: 1px solid #eeeeee;
   border-radius: 2px;
   background-color: #152836;
+  font-size: 14px;
+  line-height: 1.42857;
   cursor: pointer;
   color: #eeeeee;
-  transition: color 0.1s ease 0s, background-color 0.15s ease 0s;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.42857;
-  margin-bottom: 0;
-  padding: 10px 16px;
-  text-align: center;
-  vertical-align: middle;
   white-space: nowrap;
   text-decoration: none;
+  transition: color 0.1s ease 0s, background-color 0.15s ease 0s;
 }
 .btn:hover {
   background-color: #ffffff;
@@ -208,22 +202,22 @@ h3 {
 }
 .btn:active {
   background-color: #152836;
-  color: #eeeeee;
   box-shadow: 0px 0px 3px 0px #000000 inset;
+  color: #eeeeee;
 }
 .btn_ellips {
-  border-radius: 25px;
-  padding: 10px 30px;
   margin-top: 50px;
+  padding: 10px 30px;
+  border-radius: 25px;
 }
 /*Footer*/
 .footer {
   grid-area: footer;
+  height: 250px;
   padding: 16px 80px 16px 80px;
   background: #222222;
   color: #f6f6f6;
   font-size: 14px;
-  height: 250px;
 }
 .footer-logo {
   width: 50%;
@@ -234,16 +228,16 @@ h3 {
   top: 0;
 }
 .footer-logo__header {
-  text-align: left;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 1em;
   margin-bottom: 0px;
   padding-left: 70px;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: left;
+  line-height: 1em;
 }
 .footer-logo__text {
-  font-size: 12px;
   padding-left: 70px;
+  font-size: 12px;
 }
 .footer-copyright {
   padding-top: 20px;
@@ -256,8 +250,8 @@ h3 {
   float: right;
 }
 .footer-info__block {
-  float: right;
   width: 25%;
+  float: right;
 }
 
 .footer-info__contact {
@@ -282,8 +276,8 @@ h3 {
 }
 /*Главная страница__section-1*/
 .advt {
-  padding: 50px 80px 80px 80px;
   height: 570px;
+  padding: 50px 80px 80px 80px;
 }
 .advt__img {
   position: absolute;
@@ -300,8 +294,8 @@ h3 {
 }
 .advt__news {
   width: 40%;
-  max-height: 600px;
   margin-bottom: 40px;
+  max-height: 600px;
 }
 .advt__text {
   font-weight: 300;
@@ -316,15 +310,15 @@ h3 {
 .whom-courses__block {
   width: 50%;
   float: left;
-  text-align: center;
   padding: 0px 100px;
+  text-align: center;
 }
 .whom-courses__text {
   font-weight: 300;
   font-size: 16px;
-  line-height: 1.7em;
-  text-align: center;
   color: #222222;
+  text-align: center;
+  line-height: 1.7em;
 }
 /*Главная страница__sections-3*/
 .learning {
@@ -334,15 +328,15 @@ h3 {
   text-align: center;
 }
 .learning hr {
+  width: 50%;
+  height: 1px;
   border: none;
   background-color: #ffffff;
-  height: 1px;
-  width: 50%;
 }
 .learning__steps {
-  margin-top: 20px;
   display: flex;
   justify-content: space-around;
+  margin-top: 20px;
 }
 .learning__header {
   min-height: 60px;
@@ -350,17 +344,17 @@ h3 {
 .learning__number {
   width: 48px;
   height: 48px;
+  margin: 20px auto;
   border-radius: 24px;
   border: 1px solid #f6f6f6;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
-  margin: 20px auto;
 }
 .learning__step {
   width: 20%;
-  min-height: 200px;
   padding: 0px 20px;
+  min-height: 200px;
   font-size: 14px;
 }
 
@@ -372,8 +366,8 @@ h3 {
 }
 .skill {
   width: 25%;
-  padding: 20px;
   margin: 0 20px 20px;
+  padding: 20px;
   text-align: center;
 }
 .skill__header {
@@ -391,9 +385,9 @@ h3 {
 }
 .sidebar-ad {
   width: 25%;
-  background-color: #f5f5f5;
-  padding: 20px;
   margin: 70px 80px 50px 0px;
+  padding: 20px;
+  background-color: #f5f5f5;
   box-shadow: 0 0 0 1px silver, 0 -20px 0 -10px #77b779, 20px 0 0 -10px #77b779,
     0 20px 0 -10px #77b779, -20px 0 0 -10px #77b779;
 }
@@ -426,15 +420,14 @@ h3 {
 
 /*Наши курсы*/
 .our-courses {
+  width: 75%;
   margin-left: 80px;
   margin-right: 30px;
   text-align: center;
-  width: 75%;
-  /*outline: 1px solid red;*/
 }
 .our-courses__text {
-  text-align: left;
   margin: 30px auto 20px;
+  text-align: left;
 }
 .course-card__wrapper {
   display: flex;
@@ -442,11 +435,11 @@ h3 {
   justify-content: space-around;
   flex-wrap: wrap;
   align-content: space-around;
-  /*outline: 1px solid green;*/
 }
 .course-card {
   width: 30%;
   height: 400px;
+  margin: 70px auto;
   border-radius: 10px;
   box-shadow: 0 0 0 1px rgb(194, 192, 184) inset,
     0 5px 0 -4px rgb(255, 255, 255), 0 5px 0 -3px rgb(194, 192, 184),
@@ -454,9 +447,6 @@ h3 {
     0 17px 0 -12px rgb(255, 255, 255), 0 17px 0 -11px rgb(194, 192, 184);
   background-color: #f5f5f5;
   transform: translate3d(0, 0, 0);
-  margin: 70px auto;
-
-  /*outline: 1px solid yellow;*/
 }
 .course-card:hover {
   transform: scale(1.1);
@@ -509,36 +499,28 @@ h3 {
   background-position: center;
   background-repeat: no-repeat;
 }
-/* .course-card__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
 .course-card__title {
   position: absolute;
+  bottom: 5px;
   width: 100%;
   height: 100px;
-  bottom: 5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
   padding: 20px 10px;
   background-color: rgba(21, 40, 54, 0.7);
   color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 .course-card__title::before {
   content: "";
   position: absolute;
+  left: 50%;
   bottom: 0;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 20px 20px 0 20px;
   border-color: rgba(21, 40, 54, 0.7) transparent transparent transparent;
-  left: 50%;
   transform: translateX(-50%) translateY(100%);
 }
 /*Навигация__sidebar*/
@@ -547,22 +529,11 @@ h3 {
   padding-right: 50px;
   padding-top: 80px;
 }
-/* .aside-nav__menu {
-  padding: 20px;
-  line-height: 1.8em;
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
-} */
-/* .aside-nav__item {
-  display: block;
-  cursor: pointer;
-  list-style-type: none;
-} */
 .aside-nav__sub-item {
-  list-style-type: none;
+  padding: 10px 5px;
   border-bottom: 1px dotted rgb(179, 179, 179);
   line-height: 1.2em;
-  padding: 10px 5px;
+  list-style-type: none;
 }
 .aside-nav__sub-menu {
   padding-left: 15px;
@@ -572,15 +543,15 @@ h3 {
   color: #000000;
 }
 .aside-nav__sub-item:hover {
-  background-color: #fff;
-  color: #202c2d;
-  box-shadow: 1px 1px 3px 0px rgb(179, 179, 179);
   outline: none;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0px rgb(179, 179, 179);
+  color: #202c2d;
 }
 .aside-nav__sub-item:active {
   color: #000;
-  font-weight: bold;
   box-shadow: 1px 1px 3px 0px rgb(179, 179, 179) inset;
+  font-weight: bold;
 }
 
 /*Курсы описание*/
@@ -614,60 +585,51 @@ h3 {
 /*Галерея*/
 .gallery {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
+  max-width: 1400px;
 }
 .gallery_text-small {
+  display: block;
+  margin: 10px auto;
   font-size: 11px;
   color: #999;
-  display: block;
-  margin-top: -10px;
+  text-align: center;
 }
 .gallery__header {
   padding: 50px 0;
   text-align: center;
 }
 .gallery__lead {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.4;
   margin: 0 50px 50px;
+  font-size: 18px;
+  line-height: 1.4;
   color: #a4a4a4;
 }
-.gallery__header h1 {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 48px;
-  line-height: 52px;
-  margin: 0 0 20px;
-  position: relative;
-  display: inline-block;
-}
 .gallery__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 0;
-  padding-left: 15px;
+}
+ul.gallery__block {
+  padding-left: 0;
 }
 .gallery__photo {
-  margin-bottom: 30px;
   width: 200px;
-  display: inline-block;
-  margin-right: 30px;
-  list-style: outside none none;
+  margin: 30px;
 }
 .gallery__link {
+  position: relative;
+  display: block;
   border: 3px solid #fff;
   border-radius: 3px;
-  display: block;
   overflow: hidden;
-  position: relative;
-  float: left;
 }
 .gallery__img-responsive {
+  width: 100%;
+  height: 100%;
   transition: transform 0.15s ease 0s;
   transform: scale3d(1, 1, 1);
-  height: 100%;
-  width: 100%;
 }
 .gallery__link:hover .gallery__img-responsive {
   transform: scale3d(1.1, 1.1, 1.1);
@@ -676,12 +638,12 @@ h3 {
   opacity: 1;
 }
 .gallery__link .gallery__poster {
-  background-color: rgba(0, 0, 0, 0.1);
-  bottom: 0;
-  left: 0;
   position: absolute;
-  right: 0;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 0.15s ease 0s;
 }
 .gallery__zoom {
@@ -703,8 +665,6 @@ h3 {
 .about-us__img {
   float: right;
   width: 56%;
-  max-height: 763px;
-  max-width: 604px;
 }
 .about-us__content {
   margin-bottom: 40px;
@@ -713,13 +673,13 @@ h3 {
 /*Контакты__контент*/
 
 .content {
-  margin-left: 80px;
   width: 75%;
+  margin-left: 80px;
 }
 /*Контакты__контакты*/
 .contact {
-  padding: 30px 30px 0px 0px;
   margin: 0 auto;
+  padding: 30px 30px 0px 0px;
 }
 .contact-wrapper {
   display: flex;
@@ -727,8 +687,8 @@ h3 {
 }
 .contact__block {
   width: 25%;
-  min-width: 200px;
   padding: 10px;
+  min-width: 200px;
   text-align: center;
 }
 .contact__header {
@@ -767,30 +727,30 @@ h3 {
 }
 /*Контакты__Форма записи на курс*/
 fieldset {
-  padding: 0px;
   margin: 0px;
+  padding: 0px;
   border: 0px;
   min-width: 0px;
 }
 .form-legend {
+  display: block;
+  width: 100%;
   font-size: 16px;
   line-height: 3em;
   text-align: center;
   color: #fff;
-  display: block;
-  width: 100%;
 }
 .form {
+  width: 70%;
+  margin: 0 auto;
   background-color: #152836;
   font-size: 14px;
   color: #696969;
-  width: 70%;
-  margin: 0 auto;
 }
 .container {
-  background-color: #fff;
   padding: 20px 50px;
   border: 2px solid #e5e5e5;
+  background-color: #fff;
 }
 .form-group {
   margin-bottom: 5px;
@@ -887,8 +847,8 @@ fieldset {
     padding-right: 0;
   }
   .sidebar-ad {
-    padding: 5px;
     width: 30%;
+    padding: 5px;
   }
 }
 
@@ -900,9 +860,6 @@ fieldset {
   .logo__img {
     top: 0;
   }
-  /* .footer-logo .logo .logo__img {
-    top: 20px;
-  } */
   .gallery__header h1,
   h1 {
     font-size: 38px;
@@ -949,9 +906,9 @@ fieldset {
     margin-right: 30px;
   }
   .skill {
+    width: 30%;
     margin: 0 10px 10px;
     padding: 10px;
-    width: 30%;
   }
   .about-us {
     margin-top: 20px;
@@ -984,23 +941,26 @@ fieldset {
     width: 90%;
     margin: 0 0 50px 0;
   }
+  .gallery__photo {
+    width: 220px;
+  }
 }
 
 @media (max-width: 768px) {
   /* мобильное меню */
   .menu {
-    width: 100%;
-    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-content: flex-start;
     align-items: start;
+    width: 100%;
+    height: 100vh;
     padding-left: 50px;
   }
   .menu__link {
-    font-size: 20px;
-    padding: 5px;
     display: block;
+    padding: 5px;
+    font-size: 20px;
     color: #ffffff;
   }
   nav {
@@ -1018,12 +978,12 @@ fieldset {
     display: block;
   }
   .menu__sub-menu {
+    position: static;
     width: 100%;
     max-height: 500px;
     padding-left: 50px;
-    position: static;
-    box-shadow: none;
     background-color: rgba(105, 94, 94, 0.1);
+    box-shadow: none;
   }
   .menu__link:hover {
     box-shadow: 1px 1px 3px 0px #000000 inset;
@@ -1053,9 +1013,9 @@ fieldset {
     padding-right: 20px;
   }
   .footer {
+    position: relative;
     height: 330px;
     padding-top: 50px;
-    position: relative;
   }
   .footer-info__block {
     width: 40%;
@@ -1071,10 +1031,10 @@ fieldset {
     width: 100%;
   }
   .footer-info__menu {
-    margin: 10px;
-    padding: 5px;
     display: flex;
     justify-content: space-around;
+    margin: 10px;
+    padding: 5px;
   }
   .footer-logo__text {
     display: none;
@@ -1103,13 +1063,13 @@ fieldset {
   }
   .advt__news {
     width: 100%;
-    text-align: center;
     padding: 20px 50px;
+    text-align: center;
   }
   .advt {
-    padding: 0;
     flex-direction: column-reverse;
     height: auto;
+    padding: 0;
   }
   .whom-courses__block {
     padding: 0 10px;
@@ -1155,6 +1115,9 @@ fieldset {
     width: 100%;
     padding: 0;
   }
+  .footer-logo__img {
+    top: 0;
+  }
   .learning__step {
     width: 39%;
     padding: 0;
@@ -1168,7 +1131,16 @@ fieldset {
   .news__notice {
     font-size: 14px;
   }
-
+  .gallery__photo {
+    width: 300px;
+  }
+  .about-us__img {
+    float: none;
+    width: 100%;
+  }
+  .about-us__content {
+    text-align: justify;
+  }
   .form-group__form-message {
     min-width: 100px;
   }
@@ -1190,6 +1162,9 @@ fieldset {
   .footer-logo {
     float: none;
     width: 100%;
+  }
+  .footer-logo__img {
+    top: -10px;
   }
   .footer-info {
     float: none;
@@ -1241,13 +1216,6 @@ fieldset {
   .description__text {
     text-align: justify;
   }
-  .about-us__img {
-    float: none;
-    width: 100%;
-  }
-  .about-us__content {
-    text-align: justify;
-  }
   .content {
     margin: 5px;
   }
@@ -1262,12 +1230,12 @@ fieldset {
     height: 200px;
   }
   .sign-up {
-    padding: 0 0 50px;
     width: 100%;
+    padding: 0 0 50px;
   }
   .form-group__form-message,
   .form-group__input-form {
-    font-size: 12px;
     padding-left: 30px;
+    font-size: 12px;
   }
 }
