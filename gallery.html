@@ -1,625 +1,390 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Галерея - Helen.by</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/lightgallery.min.css" />
-    <link rel="stylesheet" href="styles/all.min.css" />
 
-    <!-- favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="images/favicon/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="images/favicon/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="images/favicon/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="images/favicon/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="images/favicon/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="images/favicon/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="images/favicon/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="images/favicon/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/favicon/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="images/favicon/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="images/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="images/favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="images/favicon/ms-icon-144x144.png"
-    />
-    <meta name="theme-color" content="#ffffff" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Галерея - Helen.by</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/lightgallery.min.css" />
+  <link rel="stylesheet" href="styles/all.min.css" />
 
-    <!-- fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,669;0,700;0,800;0,900;1,400;1,500;1,600;1,669;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="index.html"
-          ><img src="images/logo.png" alt="Логотип" class="logo__img"
-        /></a>
-        <h2 class="logo__header">Школа Елены Товстыка</h2>
-        <p class="logo__text">Курсы кройки и шитья в Минске</p>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="images/favicon/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,669;0,700;0,800;0,900;1,400;1,500;1,600;1,669;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Логотип" class="logo__img" /></a>
+      <h2 class="logo__header">Школа Елены Товстыка</h2>
+      <p class="logo__text">Курсы кройки и шитья в Минске</p>
+    </div>
+
+    <input type="checkbox" id="switcher" />
+    <label class="open" for="switcher"><i class="fas fa-bars"></i></label>
+    <nav>
+      <ul class="menu">
+        <li class="menu__item">
+          <a href="index.html" class="menu__link">Главная</a>
+        </li>
+        <li class="menu__item menu__item-has-children">
+          <a href="courses.html" class="menu__link">Наши курсы</a>
+          <ul class="menu__sub-menu">
+            <li>
+              <a href="base-courses.html" class="menu__link">Курс для начинающих</a>
+            </li>
+            <li>
+              <a href="dress-courses.html" class="menu__link">Пошив платья, блузы</a>
+            </li>
+            <li>
+              <a href="jacket-courses.html" class="menu__link">Пошив пальто, жакета, пиджака</a>
+            </li>
+            <li>
+              <a href="trousers-courses.html" class="menu__link">Пошив брюк, шорт</a>
+            </li>
+            <li>
+              <a href="child-clothes-courses.html" class="menu__link">Пошив детской одежды</a>
+            </li>
+            <li>
+              <a href="tech-courses.html" class="menu__link">Технология обработки сложных деталей</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a href="gallery.html" class="menu__link">Галерея</a>
+        </li>
+        <li class="menu__item">
+          <a href="about.html" class="menu__link">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a href="contacts.html" class="menu__link">Контакты</a>
+        </li>
+        <li class="menu__item">
+          <a href="contacts.html#sign-up" class="btn">Записаться</a>
+        </li>
+      </ul>
+      <label class="close" for="switcher"><i class="far fa-window-close"></i></label>
+    </nav>
+  </header>
+
+  <div class="main gallery">
+    <div class="gallery__header">
+      <h1>Галерея готовых работ</h1>
+      <p class="gallery__lead">
+        Всё это вы сможете пошить сами, главное найти время, возможность и
+        желание учиться!
+      </p>
+      <a href="https://www.instagram.com/elenatovstyka/?hl=ru" target="_blank" class="btn">Посмотреть в Instagram</a>
+    </div>
+
+    <div class="gallery__demo">
+      <div id="lightgallery" class="gallery__block">
+        <div data-src="images/content/foto/IMG_1433.jpg" data-sub-html="<h4>Пошив пальто, жакета, пиджака</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1433.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1433.jpg" alt="Пальто-клёш" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+
+        <div data-src="images/content/foto/IMG_1109.jpg" data-sub-html="<h4>Технология обработки сложных деталей</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1109.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1109.jpg"
+              alt="Технология обработки сложных деталей" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1123.jpg" data-sub-html="<h4>Технология обработки сложных деталей</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1123.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1123.jpg" alt="Пиджак" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+
+        <div data-src="images/content/foto/IMG_1215.jpg" data-sub-html="<h4>Пошив платья, блузы</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1215.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1215.jpg" alt="Платье" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1234.jpg" data-sub-html="<h4>Пошив пальто, жакета, пиджака</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1234.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1234.jpg" alt="Жакет" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1261.jpg" data-sub-html="<h4>Пошив пальто, жакета, пиджака</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1261.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1261.jpg" alt="Платье-пиджак" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1312.jpg" data-sub-html="<h4>Пошив детской одежды</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1312.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1312.jpg" alt="Детское платье" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1346.jpg" data-sub-html="<h4>Пошив брюк, шорт</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1346.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1346.jpg" alt="Шорты" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1377.jpg" data-sub-html="<h4>Пошив пальто, жакета, пиджака</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1377.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1377.jpg" alt="Пальто-шинель" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1113.jpg" data-sub-html="<h4>Пошив пальто, жакета, пиджака</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1113.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1113.jpg" alt="Пиджак" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1155.jpg" data-sub-html="<h4>Пошив платья, блузы</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1155.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1155.jpg" alt="Юбка-мини" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1158.jpg" data-sub-html="<h4>Пошив платья, блузы</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1158.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1158.jpg" alt="Женский костюм" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1197.jpg" data-sub-html="<h4>Технология обработки сложных деталей</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1197.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1197.jpg"
+              alt="Технология обработки сложных деталей" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/imgdress.jpg" data-sub-html="<h4>Пошив платья, блузы</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/imgdress.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/imgdress.jpg" alt="Платье" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1229.jpg" data-sub-html="<h4>Пошив пальто, жакета, пиджака</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1229.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1229.jpg" alt="Жакет" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1292.jpg" data-sub-html="<h4>Технология обработки сложных деталей</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1292.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1292.jpg"
+              alt="Технология обработки сложных деталей" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1379.jpg" data-sub-html="<h4>Технология обработки сложных деталей</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1379.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1379.jpg"
+              alt="Технология обработки сложных деталей" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1322.jpg" data-sub-html="<h4>Пошив юбки</h4>" class="gallery__photo">
+          <a href="images/content/foto/IMG_1322.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1322.jpg" alt="Юбка с запахом" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1188.jpg" data-sub-html="<h4>Пошив платья, блузы</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1188.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1188.jpg" alt="Женский костюм" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
+        <div data-src="images/content/foto/IMG_1843.jpg" data-sub-html="<h4>Пошив детской одежды</h4>"
+          class="gallery__photo">
+          <a href="images/content/foto/IMG_1843.jpg" class="gallery__link">
+            <img class="gallery__img-responsive" src="images/content/small/IMG_1843.jpg" alt="Детская туника" />
+            <div class="gallery__poster">
+              <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
+            </div>
+          </a>
+        </div>
       </div>
+      <p class="gallery_text-small">
+        Нажмите на одно из изображений, чтобы перейти в Галерею
+      </p>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer clearfix">
+    <div class="footer-logo">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo2.jpg" alt="Логотип" class="logo__img footer-logo__img" />
+        </a>
+        <h2 class="footer-logo__header">Школа Елены Товстыка</h2>
+        <p class="footer-logo__text">Курсы кройки и шитья в Минске</p>
+        <div class="footer-copyright">
+          <p>&copy; 2020 ИП Товстыка Е.И. Все права защищены.</p>
+          <p>
+            Свидетельство о государственной регистрации №XXXXXXXXX, УНП
+            XXXXXXXXX.
+          </p>
+          <p>
+            Юридический адрес: 220056 Минская область, Минский район, Сеницкий
+            с/с, аг.Сеница ул.Тополиная, 2.
+          </p>
+        </div>
+      </div>
+    </div>
 
-      <input type="checkbox" id="switcher" />
-      <label class="open" for="switcher"><i class="fas fa-bars"></i></label>
-      <nav>
-        <ul class="menu">
-          <li class="menu__item">
-            <a href="index.html" class="menu__link">Главная</a>
+    <div class="footer-info clearfix">
+      <div class="footer-info__block footer-info__nav">
+        <ul class="footer-info__menu">
+          <li><a href="index.html" class="footer-info__link">Главная</a></li>
+          <li>
+            <a href="courses.html" class="footer-info__link">Наши курсы</a>
           </li>
-          <li class="menu__item menu__item-has-children">
-            <a href="courses.html" class="menu__link">Наши курсы</a>
-            <ul class="menu__sub-menu">
-              <li>
-                <a href="base-courses.html" class="menu__link"
-                  >Курс для начинающих</a
-                >
-              </li>
-              <li>
-                <a href="dress-courses.html" class="menu__link"
-                  >Пошив платья, блузы</a
-                >
-              </li>
-              <li>
-                <a href="jacket-courses.html" class="menu__link"
-                  >Пошив пальто, жакета, пиджака</a
-                >
-              </li>
-              <li>
-                <a href="trousers-courses.html" class="menu__link"
-                  >Пошив брюк, шорт</a
-                >
-              </li>
-              <li>
-                <a href="child-clothes-courses.html" class="menu__link"
-                  >Пошив детской одежды</a
-                >
-              </li>
-              <li>
-                <a href="tech-courses.html" class="menu__link"
-                  >Технология обработки сложных деталей</a
-                >
-              </li>
-            </ul>
+          <li>
+            <a href="gallery.html" class="footer-info__link">Галерея</a>
           </li>
-          <li class="menu__item">
-            <a href="gallery.html" class="menu__link">Галерея</a>
-          </li>
-          <li class="menu__item">
-            <a href="about.html" class="menu__link">О нас</a>
-          </li>
-          <li class="menu__item">
-            <a href="contacts.html" class="menu__link">Контакты</a>
-          </li>
-          <li class="menu__item">
-            <a href="contacts.html#sign-up" class="btn">Записаться</a>
+          <li><a href="about.html" class="footer-info__link">О нас</a></li>
+          <li>
+            <a href="contacts.html" class="footer-info__link">Контакты</a>
           </li>
         </ul>
-        <label class="close" for="switcher"
-          ><i class="far fa-window-close"></i
-        ></label>
-      </nav>
-    </header>
-
-    <div class="main gallery">
-      <div class="gallery__header">
-        <h1>Галерея готовых работ</h1>
-        <p class="gallery__lead">
-          Всё это вы сможете пошить сами, главное найти время, возможность и
-          желание учиться!
-        </p>
-        <a
-          href="https://www.instagram.com/elenatovstyka/?hl=ru"
-          target="_blank"
-          class="btn"
-          >Посмотреть в Instagram</a
-        >
       </div>
-
-      <div class="gallery__demo">
-        <div id="lightgallery" class="gallery__block">
-          <div
-            data-src="images/content/foto/IMG_1433.JPG"
-            data-sub-html="<h4>Пошив пальто, жакета, пиджака</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1433.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1433.jpg"
-                alt="Пальто-клёш"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-
-          <div
-            data-src="images/content/foto/IMG_1109.JPG"
-            data-sub-html="<h4>Технология обработки сложных деталей</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1109.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1109.jpg"
-                alt="Технология обработки сложных деталей"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1123.JPG"
-            data-sub-html="<h4>Технология обработки сложных деталей</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1123.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1123.jpg"
-                alt="Пиджак"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-
-          <div
-            data-src="images/content/foto/IMG_1215.JPG"
-            data-sub-html="<h4>Пошив платья, блузы</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1215.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1215.jpg"
-                alt="Платье"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1234.JPG"
-            data-sub-html="<h4>Пошив пальто, жакета, пиджака</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1234.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1234.jpg"
-                alt="Жакет"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1261.JPG"
-            data-sub-html="<h4>Пошив пальто, жакета, пиджака</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1261.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1261.jpg"
-                alt="Платье-пиджак"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1312.JPG"
-            data-sub-html="<h4>Пошив детской одежды</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1312.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1312.jpg"
-                alt="Детское платье"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1346.JPG"
-            data-sub-html="<h4>Пошив брюк, шорт</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1346.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1346.jpg"
-                alt="Шорты"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1377.JPG"
-            data-sub-html="<h4>Пошив пальто, жакета, пиджака</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1377.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1377.jpg"
-                alt="Пальто-шинель"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1113.JPG"
-            data-sub-html="<h4>Пошив пальто, жакета, пиджака</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1113.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1113.jpg"
-                alt="Пиджак"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1155.JPG"
-            data-sub-html="<h4>Пошив платья, блузы</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1155.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1155.jpg"
-                alt="Юбка-мини"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1158.JPG"
-            data-sub-html="<h4>Пошив платья, блузы</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1158.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1158.jpg"
-                alt="Женский костюм"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1197.JPG"
-            data-sub-html="<h4>Технология обработки сложных деталей</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1197.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1197.jpg"
-                alt="Технология обработки сложных деталей"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/imgdress.jpg"
-            data-sub-html="<h4>Пошив платья, блузы</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/imgdress.jpg" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/imgdress.jpg"
-                alt="Платье"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1229.JPG"
-            data-sub-html="<h4>Пошив пальто, жакета, пиджака</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1229.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1229.jpg"
-                alt="Жакет"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1292.JPG"
-            data-sub-html="<h4>Технология обработки сложных деталей</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1292.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1292.jpg"
-                alt="Технология обработки сложных деталей"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1379.JPG"
-            data-sub-html="<h4>Технология обработки сложных деталей</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1379.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1379.jpg"
-                alt="Технология обработки сложных деталей"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1322.JPG"
-            data-sub-html="<h4>Пошив юбки</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1322.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1322.jpg"
-                alt="Юбка с запахом"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1188.JPG"
-            data-sub-html="<h4>Пошив платья, блузы</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1188.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1188.jpg"
-                alt="Женский костюм"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-          <div
-            data-src="images/content/foto/IMG_1843.JPG"
-            data-sub-html="<h4>Пошив детской одежды</h4>"
-            class="gallery__photo"
-          >
-            <a href="images/content/foto/IMG_1843.JPG" class="gallery__link">
-              <img
-                class="gallery__img-responsive"
-                src="images/content/small/IMG_1843.jpg"
-                alt="Детская туника"
-              />
-              <div class="gallery__poster">
-                <img src="images/zoom.png" class="gallery__zoom" alt="zoom" />
-              </div>
-            </a>
-          </div>
-        </div>
-        <p class="gallery_text-small">
-          Нажмите на одно из изображений, чтобы перейти в Галерею
+      <div class="footer-info__block footer-info__contact">
+        <p>Адрес:</p>
+        <p>г.Минск</p>
+        <p>ул.Кальварийская, 33 оф.303</p>
+        <p>
+          <a href="tel:+375291258869" class="footer-info__cont-link"><i class="fas fa-phone-square"></i>
+            +375(29)125-88-69</a>
+        </p>
+        <p>
+          <a href="viber://chat?number=+375291258869" class="footer-info__cont-link"><i class="fab fa-viber"></i>
+            +375(29)125-88-69</a>
+        </p>
+        <p>
+          <a href="mailto:elena@gmail.com" class="footer-info__cont-link"><i class="far fa-envelope"></i>
+            elena@gmail.com</a>
+        </p>
+      </div>
+      <div class="footer-info__block footer-info__follow">
+        <p>Мы в социальных сетях:</p>
+        <p>
+          <a href="https://www.instagram.com/elenatovstyka/" class="footer-info__link" target="_blank"><i
+              class="fab fa-instagram-square"></i> Instagram</a>
+        </p>
+        <p>
+          <a href="https://www.facebook.com/elena.tovstyka" class="footer-info__link" target="_blank"><i
+              class="fab fa-facebook-square"></i> Facebook</a>
         </p>
       </div>
     </div>
-    <!-- Footer -->
-    <footer class="footer clearfix">
-      <div class="footer-logo">
-        <div class="logo">
-          <a href="index.html">
-            <img
-              src="images/logo2.jpg"
-              alt="Логотип"
-              class="logo__img footer-logo__img"
-            />
-          </a>
-          <h2 class="footer-logo__header">Школа Елены Товстыка</h2>
-          <p class="footer-logo__text">Курсы кройки и шитья в Минске</p>
-          <div class="footer-copyright">
-            <p>&copy; 2020 ИП Товстыка Е.И. Все права защищены.</p>
-            <p>
-              Свидетельство о государственной регистрации №XXXXXXXXX, УНП
-              XXXXXXXXX.
-            </p>
-            <p>
-              Юридический адрес: 220056 Минская область, Минский район, Сеницкий
-              с/с, аг.Сеница ул.Тополиная, 2.
-            </p>
-          </div>
-        </div>
-      </div>
+    <a href="#" class="to-top"><i class="fas fa-arrow-alt-circle-up fa-3x"></i></a>
+  </footer>
 
-      <div class="footer-info clearfix">
-        <div class="footer-info__block footer-info__nav">
-          <ul class="footer-info__menu">
-            <li><a href="index.html" class="footer-info__link">Главная</a></li>
-            <li>
-              <a href="courses.html" class="footer-info__link">Наши курсы</a>
-            </li>
-            <li>
-              <a href="gallery.html" class="footer-info__link">Галерея</a>
-            </li>
-            <li><a href="about.html" class="footer-info__link">О нас</a></li>
-            <li>
-              <a href="contacts.html" class="footer-info__link">Контакты</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-info__block footer-info__contact">
-          <p>Адрес:</p>
-          <p>г.Минск</p>
-          <p>ул.Кальварийская, 33 оф.303</p>
-          <p>
-            <a href="tel:+375291258869" class="footer-info__cont-link"
-              ><i class="fas fa-phone-square"></i> +375(29)125-88-69</a
-            >
-          </p>
-          <p>
-            <a
-              href="viber://chat?number=+375291258869"
-              class="footer-info__cont-link"
-              ><i class="fab fa-viber"></i> +375(29)125-88-69</a
-            >
-          </p>
-          <p>
-            <a href="mailto:elena@gmail.com" class="footer-info__cont-link"
-              ><i class="far fa-envelope"></i> elena@gmail.com</a
-            >
-          </p>
-        </div>
-        <div class="footer-info__block footer-info__follow">
-          <p>Мы в социальных сетях:</p>
-          <p>
-            <a
-              href="https://www.instagram.com/elenatovstyka/"
-              class="footer-info__link"
-              target="_blank"
-              ><i class="fab fa-instagram-square"></i> Instagram</a
-            >
-          </p>
-          <p>
-            <a
-              href="https://www.facebook.com/elena.tovstyka"
-              class="footer-info__link"
-              target="_blank"
-              ><i class="fab fa-facebook-square"></i> Facebook</a
-            >
-          </p>
-        </div>
-      </div>
-      <a href="#" class="to-top"
-        ><i class="fas fa-arrow-alt-circle-up fa-3x"></i
-      ></a>
-    </footer>
+  <!-- jQuery version must be >= 1.8.0; -->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/lightgallery.min.js"></script>
 
-    <!-- jQuery version must be >= 1.8.0; -->
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/lightgallery.min.js"></script>
+  <!-- lightgallery plugins -->
+  <script src="js/lg-thumbnail.min.js"></script>
+  <script src="js/lg-fullscreen.min.js"></script>
+  <script src="js/jquery.mousewheel.min.js"></script>
 
-    <!-- lightgallery plugins -->
-    <script src="js/lg-thumbnail.min.js"></script>
-    <script src="js/lg-fullscreen.min.js"></script>
-    <script src="js/jquery.mousewheel.min.js"></script>
+  <script src="js/script.js"></script>
 
-    <script src="js/script.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        $("#lightgallery").lightGallery({
-          mode: "lg-fade",
-          cssEasing: "cubic-bezier(0.25, 0, 0.25, 1)",
-        });
+  <script>
+    $(document).ready(function () {
+      $("#lightgallery").lightGallery({
+        mode: "lg-fade",
+        cssEasing: "cubic-bezier(0.25, 0, 0.25, 1)",
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
