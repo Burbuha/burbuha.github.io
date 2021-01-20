@@ -321,6 +321,16 @@ header {
   text-align: center;
   line-height: 1.7em;
 }
+.animate-path {
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 1000;
+  animation: animdash 5s infinite 1s;
+}
+@keyframes animdash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 /*Главная страница__sections-3*/
 .learning {
   padding: 20px 80px;
